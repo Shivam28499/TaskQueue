@@ -1,15 +1,10 @@
-import express from 'express';
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
+import app from "./app.js";
+
 dotenv.config();
-const app = express();
-const PORT = process.env.PORT;
 
-app.get('/home',(req,res) => {
-    res.json({
-        message: 'In the get router'
-    });
-})
+const PORT = process.env.PORT || 3000;
 
-app.listen(PORT,()=>{
-    console.log("Server on port = ",PORT);
+app.listen(PORT, () => {
+    console.log("Server on port =", PORT);
 });
