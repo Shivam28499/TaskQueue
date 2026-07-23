@@ -100,7 +100,7 @@ error: {}
 # DELETE /api/v1/tasks/:id
 
 # Update Task Status
-# PATCH /api/v1/tasks/:id
+# PATCH /api/v1/tasks/:id/status
 
 Request:
 
