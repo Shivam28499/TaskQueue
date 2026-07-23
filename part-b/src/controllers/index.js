@@ -61,7 +61,7 @@ export async function getTasks(req,res) {
 export async function deleteTask(req,res) {
     try {
         const response = await taskService.deleteTask(req.params.id);
-        return res.json(200).json({
+        return res.status(200).json({
             success: true,
             message: 'Task deleted successfully',
             data: response,
