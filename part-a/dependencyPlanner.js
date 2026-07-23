@@ -9,17 +9,13 @@ function dependencyPlanner(tasks) {
     const queue = [];
 
     for (const task of tasks) {
-        console.log("task:",task);
         graph[task.id] = [];
         indegree[task.id] = 0;
-        console.log("graph id:",graph[task.id]);
-        console.log("indegree:",indegree[task.id]);
     }
 
     for (const task of tasks) {
 
         for (const dependency of task.depends_on) {
-            console.log("check in graph:",(dependency in graph));
             if (!(dependency in graph)) {
                 throw new Error(`Missing dependency: ${dependency}`);
             }
@@ -27,7 +23,6 @@ function dependencyPlanner(tasks) {
             graph[dependency].push(task.id);
 
             indegree[task.id]++;
-            console.log("indegreeNNN:",indegree);
         }
     }
 
