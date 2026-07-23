@@ -1,17 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "xxxx",
-    "database": "database-name",
+    "password": "1234",
+    "database": "TA",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": "xxxx",
-    "database": "database-name",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+  "dialect": "sqlite",
+  "storage": ":memory:"
   },
   "production": {
     "username": "root",

@@ -1,6 +1,6 @@
 import express from 'express';
 import {createTask, getTask, getTasks, deleteTask, updateTask, NextTask} from '../../controllers/index.js'; 
-import { createTaskValidator,updateStatusValidator,taskIdValidator } from '../../../validators/index.js';
+import { createTaskValidator,updateStatusValidator,taskIdValidator } from '../../validators/index.js';
 import validateRequest from '../../middlewares/index.js';
 const router  = express.Router();
 

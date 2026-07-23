@@ -1,9 +1,12 @@
 import request from "supertest";
 import app from "../src/app.js";
-
+import db from '../src/models/index.js'
 
 describe("Task API Test", () => {
 
+    beforeAll(async () => {
+        await db.sequelize.sync({ force: true });
+    });
 
     test("Should create a task", async () => {
 
@@ -83,16 +86,27 @@ describe("Task API Test", () => {
 
     }); 
 
-    test("Should return next recommended task", async()=>{
+   test("Should return next recommended task", async () => {
 
+    await request(app)
+                .post("/api/v1/tasks")
+                .send({
+                    title: "Pending Task",
+                    priority: "critical",
+                    status: "pending",
+                    due_date: "2026-08-12",
+                    estimated_hours: 2
+                });
 
-        const response = await request(app)
-            .get("/api/v1/task/next");
+            const response = await request(app)
+                .get("/api/v1/task/next");
 
-        expect(response.body.data.status)
-            .toBe("pending");
+            expect(response.body.success).toBe(true);
+            expect(response.body.data.status).toBe("pending");
+        });
 
-
+    afterAll(async () => {
+    await db.sequelize.close();
     });
 
 
