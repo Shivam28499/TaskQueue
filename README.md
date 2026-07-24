@@ -38,40 +38,12 @@ npm install
 
 npm test
 
-## Setup ##
-
-## src/config/config.json
-
-{
-  "development": {
-    "username": "root",
-    "password": "password", // your database password
-    "database": "database name, // your database name
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "test": {
-  "dialect": "sqlite",
-  "storage": ":memory:"
-  },
-  "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  }
-}
-
-## Go inside part-b/src
-
-## RUN THIS 
-
-## npx sequelize db:migrate
 ## cd ..
 
 # .env
  PORT=XXXX
+
+// check folder structure should be TaskQueue/part-b
 
 ## npm run dev ##
 
