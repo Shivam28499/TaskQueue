@@ -6,8 +6,6 @@ git clone <repository-url>
 
 cd TaskQueue
 
-cd part-a
-
 # Part A - Dependency Planner
 
 cd part-a
