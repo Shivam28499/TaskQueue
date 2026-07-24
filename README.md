@@ -29,7 +29,7 @@ Graph stores all relationships and indegree stores each task.
 
 # Part B - Smart Task Queue API
 
-cd .. 
+cd ..
 cd part-b
 
 npm install
@@ -38,13 +38,12 @@ npm test
 
 // check folder structure should be TaskQueue/part-b
 
-### RUN  COMMAND###
-
-## npm run dev ##
+#### npm run dev
 
 # POST /api/v1/tasks
 
 # Request body
+
 {
 "title":"Build Authentication API",
 "priority":"critical",
@@ -54,6 +53,7 @@ npm test
 }
 
 # response
+
 {
 "success":true,
 "message":"Task created successfully",
@@ -67,29 +67,30 @@ data: {
 error: {}
 }
 
-# GET /api/v1/tasks // GET /api/tasks?status=pending
+# GET /api/v1/tasks
 
 # response
 
 {
-  "success": true,
-  "message": "Tasks get successfully",
-  "data": [
-    {
-      "id": 1,
-      "title": "Build Authentication API",
-      "priority": "critical",
-      "status": "pending",
-      "due_date": "2026-08-10",
-      "estimated_hours": 5
-    }
-  ],
-  "error": {}
+"success": true,
+"message": "Tasks get successfully",
+"data": [
+{
+"id": 1,
+"title": "Build Authentication API",
+"priority": "critical",
+"status": "pending",
+"due_date": "2026-08-10",
+"estimated_hours": 5
+}
+],
+"error": {}
 }
 
 # GET /api/v1/tasks:id
 
 # response
+
     {
         "success":true,
         "message":"Task get successfully",
@@ -104,31 +105,32 @@ error: {}
         error: {}
     }
 
-
 # DELETE /api/v1/tasks/:id
 
 # Update Task Status
+
 # PATCH /api/v1/tasks/:id/status
 
 Request:
 
 {
-  "status": "in_progress" 
+"status": "in_progress"
 }
 
 Response:
 
 {
-  "success": true,
-  "message": "Task updated successfully",
-  "data": {
-    "id":1,
-    "status":"in_progress"
-  },
-  "error": {}
+"success": true,
+"message": "Task updated successfully",
+"data": {
+"id":1,
+"status":"in_progress"
+},
+"error": {}
 }
 
-## Next Task ##
+## Next Task
+
 # GET /api/v1/task/next
 
 Implemented using SQL ORDER BY with CASE expression.
@@ -140,7 +142,6 @@ O(n log n)
 Memory:
 O(1) additional application memory.
 
+## Testing
 
-##       Testing    ## 
-
-# npm test ##
+# npm test
