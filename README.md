@@ -14,7 +14,7 @@ cd part-a
 
 npm install
 
-node test.js
+npm test
 
 # Part B - Smart Task Queue API
 

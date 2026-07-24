@@ -1,5 +1,4 @@
 ## npm install ##
-## npm run dev ##
 
 ## Setup ##
 
@@ -27,10 +26,12 @@
 }
 
 ## Go inside part-b/src 
-## npx sequelize db:migrate
+## RUN npx sequelize db:migrate
 
 # .env
  PORT=XXXX
+
+## npm run dev ##
 
 # POST /api/v1/tasks
 
