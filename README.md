@@ -63,8 +63,12 @@ npm test
   }
 }
 
-## Go inside part-b/src 
-## RUN npx sequelize db:migrate
+## Go inside part-b/src
+
+## RUN THIS 
+
+## npx sequelize db:migrate
+## cd ..
 
 # .env
  PORT=XXXX

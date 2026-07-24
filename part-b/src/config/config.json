@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "xxxx",
-    "database": "database_name",
+    "database": "database-name",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
