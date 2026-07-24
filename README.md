@@ -38,11 +38,6 @@ npm install
 
 npm test
 
-## cd ..
-
-# .env
- PORT=XXXX
-
 // check folder structure should be TaskQueue/part-b
 
 ## npm run dev ##
