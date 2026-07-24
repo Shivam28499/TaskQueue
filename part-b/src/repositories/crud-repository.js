@@ -16,13 +16,13 @@ class CrudRepository {
                 if (!task) {
                     throw new Error("Task not found");
                 }
-                        const response = await this.model.destroy({
+                const response = await this.model.destroy({
                 where: {
                     id: data
                 }
             });
             if(!response){
-                throw new Error('Something is wrong is here');
+                throw new Error('Something is wrong here');
             }
             return response;
     }
@@ -30,7 +30,7 @@ class CrudRepository {
     async get(data){
             const response = await this.model.findByPk(data);
             if(!response){
-               throw new Error('Something is wrong here');
+               throw new Error('Task not found');
             }
             return response;
     }

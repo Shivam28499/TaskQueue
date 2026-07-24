@@ -38,6 +38,8 @@ npm test
 
 // check folder structure should be TaskQueue/part-b
 
+### RUN  COMMAND###
+
 ## npm run dev ##
 
 # POST /api/v1/tasks
