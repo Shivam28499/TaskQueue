@@ -1,7 +1,7 @@
 ## npm install ##
 ## npm run dev ##
 
-## CREATE folder and FILE
+## Setup ##
 
 ## src/config/config.json
 
@@ -14,11 +14,8 @@
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": "password", // your database password
-    "database": "database name", // your database name
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+  "dialect": "sqlite",
+  "storage": ":memory:"
   },
   "production": {
     "username": "root",
@@ -29,7 +26,8 @@
   }
 }
 
-## Also create inside database. databasename : taskqueue
+## Go inside part-b/src 
+## npx sequelize db:migrate
 
 # .env
  PORT=XXXX
